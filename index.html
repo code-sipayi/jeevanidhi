@@ -79,7 +79,7 @@
                 <div class="row d-flex justify-content-center">
                 <div class="col-lg-8">
                     <div class="section-tittle text-center mb-70">
-                        <h2>Wedding Info</h2>
+                        <h2 onclick="toggleVisitCount()">Wedding Info</h2>
                         <img src="assets/img/gallery/tittle_img.png" alt="">
                         <h4>Priceless moments in life are meant to be celebrated in the presence of the ones you love, which is why We hope you will be joining the celebration at our wedding ceremony.</h4>
                     </div>
@@ -403,10 +403,15 @@
     <div class="play-music">
         <img id="speakerImage" class="speakerImage fa-play-circle" onclick="toggleMusic()" src="./assets/audio/sound-on.png"></div>
         <div class="audio-div">
-            <audio hidden loop="" id="ambiance" controls="controls">
-                <source src="./assets/audio/music.mp3" type="audio/mpeg">
+            <audio autoplay hidden loop="" id="ambiance" controls="controls">
+                <source src="./assets/audio/stay_with_me.mp3" type="audio/mpeg">
             </audio>
         </div>
+    </div>
+    <div data-background="assets/img/gallery/section_bg4.png" id="counterDiv" style="display: none;">
+        <div class="counterWeb">
+          <div class="CounterHead">Total Website Visit</div>
+          <div class="webVisiterCount">00</div>
     </div>
 </main>
 <footer>
@@ -472,6 +477,7 @@
     <script src="./assets/js/main.js"></script>
 
     <script src="./assets/js/myjs.js"></script>
+    <script type="text/javascript" src="./assets/js/utils.js"> </script>
     
 </body>
 </html>
