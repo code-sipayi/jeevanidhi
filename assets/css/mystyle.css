@@ -57,6 +57,9 @@ input[type=number] {
 .webVisiterCount {
     font-size: 9em!important;
 }
+.youtubeCount {
+    font-size: 9em!important;
+}
 
 .counterWeb {
     min-width: 300px;
