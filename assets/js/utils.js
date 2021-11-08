@@ -11,9 +11,7 @@ function updateCounter(){
     fetch(`https://api.countapi.xyz/hit/mysite.com/visits`)
     .then(res => res.json())
     .then(data=>{
-
         counterElement.innerHTML = data.value;
-        console.log(counterElement);
     });
 }
 
@@ -30,9 +28,7 @@ function updateYoutubeCounter(){
   fetch(`https://api.countapi.xyz/hit/mysite.com/visits`)
   .then(res => res.json())
   .then(data=>{
-
       counterYoutubeElement.innerHTML = data.value;
-      console.log(counterYoutubeElement);
   });
 }
 
@@ -41,3 +37,10 @@ updateCounter();
 counterElement = document.getElementsByClassName('webVisiterCount')[0];
 counterYoutubeElement = document.getElementsByClassName('youtubeCount')[0];
 
+window.onload = function() {
+  var oFrame = document.getElementById("youtubeFrame");
+  console.log(oFrame)
+  oFrame.contentWindow.document.onclick = function() {
+    updateYoutubeCounter();
+  };
+};
