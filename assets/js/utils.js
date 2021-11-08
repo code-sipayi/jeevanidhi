@@ -8,7 +8,7 @@ function toggleVisitCount() {
 }
 
 function updateCounter(){
-    fetch(`https://api.countapi.xyz/hit/mysite.com/visits`)
+    fetch(`https://api.countapi.xyz/hit/jeevanidhi.ml/visits`)
     .then(res => res.json())
     .then(data=>{
         counterElement.innerHTML = data.value;
@@ -25,7 +25,7 @@ function toggleYoutubeCount() {
 }
 
 function updateYoutubeCounter(){
-  fetch(`https://api.countapi.xyz/hit/mysite.com/visits`)
+  fetch(`https://api.countapi.xyz/hit/jeevanidhi.ml/youtubeclicks`)
   .then(res => res.json())
   .then(data=>{
       counterYoutubeElement.innerHTML = data.value;
@@ -39,7 +39,6 @@ counterYoutubeElement = document.getElementsByClassName('youtubeCount')[0];
 
 window.onload = function() {
   var oFrame = document.getElementById("youtubeFrame");
-  console.log(oFrame)
   oFrame.contentWindow.document.onclick = function() {
     updateYoutubeCounter();
   };
