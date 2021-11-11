@@ -40,6 +40,15 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-PDVPGKH');</script>
     <!-- End Google Tag Manager -->
+    <script>
+        var eventListener = window.addEventListener('blur', function() {
+            if (document.activeElement === document.getElementById('youtubeFrame')) {
+                updateYoutubeCounter();
+                setTimeout(function(){ window.focus(); }, 0);
+            }
+            window.removeEventListener('blur', eventListener );
+        });
+    </script>
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->

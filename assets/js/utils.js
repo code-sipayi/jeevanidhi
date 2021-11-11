@@ -36,10 +36,3 @@ updateCounter();
 
 counterElement = document.getElementsByClassName('webVisiterCount')[0];
 counterYoutubeElement = document.getElementsByClassName('youtubeCount')[0];
-
-window.onload = function() {
-  var oFrame = document.getElementById("youtubeFrame");
-  oFrame.contentWindow.document.onclick = function() {
-    updateYoutubeCounter();
-  };
-};
